@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="bootstrap.min.css">
     <title>Sales Record</title>
   </head>
-  <body>
+  <body >
     <div class="container">
         <form action="" id="main">
             <div class="navbar navbar-light my-2 p-2 border-bottom"">
@@ -23,31 +23,28 @@
                   </div>
                   <div class="col">
                       <button class="btn btn-outline-dark form-control py-2">New Customer</button>
-                      <!-- <a href="#" class="btn btn-primary btn-lg" role="button" data-bs-toggle="button" >Toggle link</a> -->
                   </div>
                 </div>
           </div>
-          
           <!-- The second -->
          <section class="mb-3 p-2">
-     
           <div class="row my-2">
               <div class="col">
                   <h4 class="pb-1"> Product/Service</h4>
                   <select class="form-select form-select-lg py-2" id="product">
                       <option selected>Select a Product</option>
-                      <option>Nokia 3310</option>
-                      <option>Hp Laptop</option>
-                      <option>Nokia 3310 (Pending)</option>
-                      <option>Cargo Management System</option>
-                      <option>Bulk SMS Account setup</option>
+                      <option value="nokia">Nokia 3310</option>
+                      <option  value="hp">Hp Laptop</option>
+                      <option value="nokia-p">Nokia 3310 (Pending)</option>
+                      <option value="cargo-ms">Cargo Management System</option>
+                      <option value="bulk-sms">Bulk SMS Account setup</option>
                     </select>
                     <div class=" col p-3 border border-success border-2 mt-4 text-success" id="sumarry">
-                        <h4>Summary</h4>
+                        <h4 class="head">Summary</h4>
                     </div>
                 </div>
                 <div class="col">
-                  <h4 class="pb-1"> Quantity</h4>
+                  <h4 class="pb-1">Quantity</h4>
                   <div class="input-group">
                       <span class="input-group-text px-3 bg-light text-dark" id="basic-addon3"><i class="fas fa-list-ol fa-2x"></i></span>
                       <input type="number" class="form-control py-2" id="quantity-number" aria-describedby="basic-addon3">
@@ -55,13 +52,13 @@
                     <div class="row pt-3">
                         <div class="col">
                           <h5 class="p-1"> Selling Price</h5>
-                          <input type="number" class="form-control py-2" id="selling-price" aria-describedby="basic-addon3">
+                          <input type="number" class="form-control py-2" id="selling-price" aria-describedby="basic-addon3" readonly>
                         </div>
                         <div class="col">
                           <h5 class="p-1">Total Amount</h5>
                           <div class="input-group">
-                          <input type="number" class="form-control py-2" id="total-amount" aria-describedby="basic-addon3">
-                          <button class="input-group-text  text-white " id="basic-addon3 add" style="background-color: #ff7b00;"
+                          <input type="number" class="form-control py-2" id="total-amount" aria-describedby="basic-addon3" readonly>
+                          <button class="input-group-text  text-white " id="add" style="background-color: #ff7b00;"
                           ><i class="fas fa-plus px-1"></i>
                               Add
                           </button>
@@ -71,7 +68,7 @@
                 </div>
           </div>
           <div class="row">
-              <table class="table table-success table-striped border mt-4" id="table">
+              <table class=" table table-light mt-4" id="table">
                   <thead class="table-light">
                     <tr>
                       <th scope="col">Name</th>
